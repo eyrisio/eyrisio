@@ -19,6 +19,9 @@
 					nativeBuildInputs = with pkgs; [
 						bun
 					];
+					buildInputs = with pkgs; [
+						eslint_d
+					];
 				};
 			}
 		);
