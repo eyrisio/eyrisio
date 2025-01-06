@@ -78,8 +78,7 @@ td {
 }
 
 table {
-	border-collapse: separate;
-	border-spacing: 2px;
+	border-collapse: collapse;
 	width: 100%;
 }
 
@@ -88,10 +87,6 @@ td a {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-}
-
-td {
-	border-color: var(--border-color);
 }
 
 .header {
@@ -116,4 +111,8 @@ details {
 
 details summary {
 	cursor: pointer;
+}
+
+#header {
+	padding-top: 20px;
 }
