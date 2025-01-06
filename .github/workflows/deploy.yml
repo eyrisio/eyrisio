@@ -16,8 +16,9 @@ jobs:
     - name: Setup Bun
       uses: oven-sh/setup-bun@v2
 
-      run: bun install
-      run: bun run build
+      run: |
+        bun install
+        bun run build
 
     - name: Upload files as artifact
       id: deployment
