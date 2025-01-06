@@ -1,33 +1,25 @@
 name: Deploy to GitHub pages
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - name: Check out repository code
       uses: actions/checkout@v4
-
     - name: Setup Bun
       uses: oven-sh/setup-bun@v2
-
-    - name: Buld files
+    - name: Build files
       run: |
         bun install
         bun run build
-
     - name: Upload files as artifact
-      id: deployment
       uses: actions/upload-pages-artifact@v3
       with:
         name: production-files
         path: dist/
-
   deploy:
     permissions:
       contents: read
@@ -39,6 +31,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Page
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
