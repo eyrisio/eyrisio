@@ -107,3 +107,13 @@ td {
 	list-style-type: square;
 	padding-left: 20px;
 }
+
+details {
+	border: 2px solid var(--border-color);
+	padding: 10px;
+	/* Adjust padding for the content */
+}
+
+details summary {
+	cursor: pointer;
+}
